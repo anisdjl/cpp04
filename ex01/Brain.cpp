@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 18:03:35 by adjelili          #+#    #+#             */
-/*   Updated: 2026/05/09 18:27:11 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/05/11 16:43:26 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,25 @@ Brain::~Brain(void)
 
 Brain::Brain(const Brain &src)
 {
-	_ideas[100] = src._ideas[100];
+	for (int i = 0; i < 100; i++)
+		_ideas[i] = src._ideas[i];
 	std::cout << "Brain copy constructor's called\n";
 }
 
 Brain	&Brain::operator=(const Brain &src)
 {
 	if (this != &src)
-		_ideas[100] = src._ideas[100];
+	{
+		for (int i = 0; i < 100; i++)
+			_ideas[i] = src._ideas[i];
+	}
 	std::cout << "Brain assignement constructor's called\n";
 	return (*this);
+}
+
+void	Brain::fill_brain(void)
+{
+	for (int i = 0; i < 100; i++)
+		_ideas[i] = "hello";
+	return ;
 }

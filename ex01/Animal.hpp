@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 15:23:21 by adjelili          #+#    #+#             */
-/*   Updated: 2026/05/09 18:41:12 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/05/11 14:49:03 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Animal
 class Dog : public Animal
 {
 	private:
-		Brain	*brain_dog;
+		Brain	*_brain_dog;
 	public:
 		Dog(void);
 		~Dog(void);
@@ -46,7 +46,7 @@ class Dog : public Animal
 class Cat : public Animal
 {
 	private:
-		Brain	*brain_cat;
+		Brain	*_brain_cat;
 	public:
 		Cat(void);
 		~Cat(void);

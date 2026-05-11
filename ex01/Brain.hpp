@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 18:03:48 by adjelili          #+#    #+#             */
-/*   Updated: 2026/05/09 18:13:50 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/05/11 14:49:20 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Brain
 		~Brain(void);
 		Brain(const Brain &src);
 		Brain &operator=(const Brain &src);
+		void	fill_brain(void);
 };
 
 #endif
