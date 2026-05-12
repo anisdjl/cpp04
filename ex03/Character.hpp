@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 13:16:08 by adjelili          #+#    #+#             */
-/*   Updated: 2026/05/12 15:44:09 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/05/12 17:45:48 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,17 @@ class ICharacter
 class Character : public ICharacter
 {
 	protected:
-		AMateria *tab_of_materias[4];
+		AMateria *_tab_of_materias[4];
+		std::string _name;
+	public:
+		Character(std::string name);
+		~Character(void);
+		Character(const Character &src);
+		Character &operator=(const Character &src);
+		void	equip(AMateria *m);
+		void	unequip(int idx);
+		std::string	const &getName(void) const;
+		void	use(int idx, ICharacter &target);
 };
 
 #endif
