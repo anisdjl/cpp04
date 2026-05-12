@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 15:21:39 by adjelili          #+#    #+#             */
-/*   Updated: 2026/05/11 16:46:33 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/05/11 16:55:13 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,17 @@ int main(void)
 		animal_tab[y] = new Cat();
 	for (int a = 0; a < 10; a++)
 		delete animal_tab[a];
-	// Dog basic;
-    // {
-    //     Dog tmp = basic;
-    // }
 	return 0;
 }
+
+// int main()
+// {
+//     Dog basic;
+// 	{
+// 		Dog tmp = basic;
+// 	}
+
+// 	std::cout << "Le chien de base est-il toujours vivant ?" << std::endl;
+// 	basic.makeSound(); 
+// 	return 0;
+// }
