@@ -6,11 +6,12 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 14:33:25 by adjelili          #+#    #+#             */
-/*   Updated: 2026/05/12 15:34:35 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/05/13 13:06:55 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
+#include "Character.hpp"
 
 Ice::Ice(void) : AMateria("ice")
 {
@@ -42,5 +43,5 @@ Ice &Ice::operator=(const Ice &src)
 
 void	Ice::use(ICharacter &target)
 {
-	std::cout << "* heals " << target.getName() << "'s wounds *\n";
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *\n";
 }

@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 12:47:52 by adjelili          #+#    #+#             */
-/*   Updated: 2026/05/12 15:35:23 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/05/13 12:26:44 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 
 #include <iostream>
 #include <string>
-#include "Character.hpp"
+
+class ICharacter;
 
 class AMateria
 {

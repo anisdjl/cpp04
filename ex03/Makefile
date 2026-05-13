@@ -6,7 +6,7 @@
 #    By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/12 12:48:04 by adjelili          #+#    #+#              #
-#    Updated: 2026/05/12 12:48:06 by adjelili         ###   ########.fr        #
+#    Updated: 2026/05/13 12:12:15 by adjelili         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,11 @@ CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -Wshadow -std=c++98
 NAME = a.out
 SRC = main.cpp \
-	  AMateria.cpp
+	  AMateria.cpp \
+	  Character.cpp \
+	  MateriaSource.cpp \
+	  Cure.cpp \
+	  Ice.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

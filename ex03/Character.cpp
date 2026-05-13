@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 13:16:45 by adjelili          #+#    #+#             */
-/*   Updated: 2026/05/12 18:04:33 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/05/13 12:53:08 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,12 @@ Character::Character(std::string name)
 
 Character::~Character(void)
 {
+	for (int i = 0; i < 4; i++)
+		if (_tab_of_materias[i])
+		{
+			delete _tab_of_materias[i];
+			_tab_of_materias[i] = NULL;
+		}
 	std::cout << "Character destructor's called\n";
 }
 
@@ -83,5 +89,18 @@ void	Character::equip(AMateria *m)
 
 void	Character::unequip(int idx)
 {
-	
+	if (idx > 4 || idx < 0 || !_tab_of_materias[idx])
+	{
+		std::cout << "No item at this index...\n";
+		return ;
+	}
+	else
+		_tab_of_materias[idx] = NULL;
+}
+
+void	Character::use(int idx, ICharacter &target)
+{
+	if (idx > 4 || idx < 0)
+		return ;
+	_tab_of_materias[idx]->use(target);
 }
