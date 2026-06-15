@@ -6,12 +6,13 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 15:21:39 by adjelili          #+#    #+#             */
-/*   Updated: 2026/05/09 17:52:14 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/06/15 14:26:43 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Wronganimal.hpp"
+#include "Wrongcat.hpp"
 
 int main(void)
 {

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "Wronganimal.hpp"
+#include "Wrongcat.hpp"
 
 WrongAnimal::WrongAnimal(void)
 {

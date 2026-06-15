@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 17:40:42 by adjelili          #+#    #+#             */
-/*   Updated: 2026/05/09 17:56:07 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/06/15 14:27:53 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,6 @@ class WrongAnimal {
 		WrongAnimal &operator=(const WrongAnimal &src);
 		void makeSound() const;
 		std::string getType() const;
-};
-
-class WrongCat : public WrongAnimal {
-	public:
-		WrongCat();
-		~WrongCat();
-		std::string	getType(void) const;
-		WrongCat(const WrongCat &src);
-		WrongCat	&operator=(const WrongCat &src);
-		void makeSound() const;
 };
 
 #endif
