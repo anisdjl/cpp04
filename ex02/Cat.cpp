@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 15:51:05 by adjelili          #+#    #+#             */
-/*   Updated: 2026/05/11 16:05:33 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/06/22 15:29:34 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,13 @@ std::string	Cat::getType(void) const
 Cat::Cat(const Cat &src) : Animal::Animal(src)
 {
 	_type = src._type;
-	_brain_cat = new Brain();
-	*(_brain_cat) = *(src._brain_cat);
+	if (src._brain_cat)
+	{
+		_brain_cat = new Brain();
+		*(_brain_cat) = *(src._brain_cat);
+	}
+	else
+		_brain_cat = NULL;
 	std::cout << "Cat copy constructor's called\n";
 }
 
@@ -48,7 +53,13 @@ Cat	&Cat::operator=(const Cat &src)
 	if (this != &src)
 	{
 		Animal::operator=(src);
-		*(_brain_cat) = *(src._brain_cat);
+		delete _brain_cat;
+		_brain_cat = NULL;
+		if (src._brain_cat)
+		{
+			_brain_cat = new Brain();
+			*(_brain_cat) = *(src._brain_cat);
+		}
 	}
 	std::cout << "Cat assignement constructor's called\n";
 	return (*this);

@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anis <anis@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 15:21:39 by adjelili          #+#    #+#             */
-/*   Updated: 2026/05/11 23:09:49 by anis             ###   ########.fr       */
+/*   Updated: 2026/06/22 15:36:19 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
-#include "Wronganimal.hpp"
+#include "WrongAnimal.hpp"
 
 int main(void)
 {

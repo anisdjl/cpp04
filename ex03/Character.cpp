@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 13:16:45 by adjelili          #+#    #+#             */
-/*   Updated: 2026/05/13 12:53:08 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/06/22 15:43:57 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,10 @@ Character	&Character::operator=(const Character &src)
 				delete this->_tab_of_materias[i];
 				this->_tab_of_materias[i] = NULL;
 			}
-			this->_tab_of_materias[i] = src._tab_of_materias[i]->clone();
+			if (src._tab_of_materias[i])
+				this->_tab_of_materias[i] = src._tab_of_materias[i]->clone();
+			else
+				this->_tab_of_materias[i] = NULL;
 		}
 	}
 	_name = src._name;

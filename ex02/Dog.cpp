@@ -6,7 +6,7 @@
 /*   By: adjelili <adjelili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 15:50:32 by adjelili          #+#    #+#             */
-/*   Updated: 2026/05/11 16:05:45 by adjelili         ###   ########.fr       */
+/*   Updated: 2026/06/22 15:26:55 by adjelili         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,13 @@ std::string	Dog::getType(void) const
 Dog::Dog(const Dog &src) : Animal::Animal(src)
 {
 	_type = src._type;
-	_brain_dog = new Brain();
-	*(_brain_dog) = *(src._brain_dog);
+	if (src._brain_dog)
+	{
+		_brain_dog = new Brain();
+		*(_brain_dog) = *(src._brain_dog);
+	}
+	else
+		_brain_dog = NULL;
 	std::cout << "Dog copy constructor's called\n";
 }
 
@@ -48,7 +53,13 @@ Dog	&Dog::operator=(const Dog &src)
 	if (this != &src)
 	{
 		Animal::operator=(src);
-		*(_brain_dog) = *(src._brain_dog);
+		delete _brain_dog;
+		_brain_dog = NULL;
+		if (src._brain_dog)
+		{
+			_brain_dog = new Brain();
+			*(_brain_dog) = *(src._brain_dog);
+		}
 	}
 	std::cout << "Dog assignement constructor's called\n";
 	return (*this);
